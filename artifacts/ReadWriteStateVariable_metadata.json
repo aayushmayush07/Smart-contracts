@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "new_variable",
+						"type": "uint256"
+					}
+				],
+				"name": "set",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"soliditybyexampleprac/readwritestatevariable.sol": "ReadWriteStateVariable"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"soliditybyexampleprac/readwritestatevariable.sol": {
+			"keccak256": "0x60d73274a56913cf086a8925cf08146194c49fa68140b2323e13e51beeeddb34",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bc5dc68be23706b89f2bab6833475b9e03e5352861f52911d01700c0cfb13f02",
+				"dweb:/ipfs/QmRBuhu3eSgCFZj3vfapgyUqDuXTQZ4sYQuievN6gvdgQF"
+			]
+		}
+	},
+	"version": 1
+}
