@@ -27,43 +27,12 @@
 						"type": "uint256"
 					}
 				],
-				"name": "TransferConfirmed",
+				"name": "LogTransfer",
 				"type": "event"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "TransferInitiated",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "transferId",
-						"type": "bytes32"
-					}
-				],
-				"name": "confirmTransfer",
+				"inputs": [],
+				"name": "subscribe",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -71,30 +40,31 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "initiateTransfer",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
 						"name": "",
-						"type": "bytes32"
+						"type": "uint256"
 					}
 				],
-				"name": "transferConfirmations",
+				"name": "subscriberList",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "subscribers",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -103,6 +73,31 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unsubscribe",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -119,7 +114,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"soliditybyexampleprac/eventsadvanced.sol": "EventDrivenArchitecture"
+			"soliditybyexampleprac/eventsadvanced.sol": "EventSubscription"
 		},
 		"evmVersion": "prague",
 		"libraries": {},

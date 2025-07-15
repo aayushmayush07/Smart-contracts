@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "handleTransferEvent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"soliditybyexampleprac/eventsadvanced.sol": "IEventSubscriber"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"soliditybyexampleprac/eventsadvanced.sol": {
+			"keccak256": "0xe9e14619c7a2507e1463795146fd89049afd35fec75d73e54b078880cf03dd8a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://53a7c999bdec43febd4dc30c3a6eb5a6b5a40329d16f455fbc353b032ce2c171",
+				"dweb:/ipfs/QmY29uszgWZMTWQzZT7VNRuUZDvbLphqnGtwXpxNxZJLxb"
+			]
+		}
+	},
+	"version": 1
+}
