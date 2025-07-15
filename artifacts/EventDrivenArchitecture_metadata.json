@@ -6,37 +6,16 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "requested",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "available",
-						"type": "uint256"
-					}
-				],
-				"name": "InsufficientBalance",
-				"type": "error"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
+						"indexed": true,
 						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
 					{
-						"indexed": false,
+						"indexed": true,
 						"internalType": "address",
 						"name": "to",
 						"type": "address"
@@ -44,79 +23,86 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"name": "Sent",
+				"name": "TransferConfirmed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "TransferInitiated",
 				"type": "event"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "bytes32",
+						"name": "transferId",
+						"type": "bytes32"
 					}
 				],
-				"name": "balances",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "confirmTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"name": "mint",
+				"name": "initiateTransfer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
 					}
 				],
-				"name": "send",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "transferConfirmations",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -133,7 +119,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"aksimplecoin.sol": "AkCoin"
+			"soliditybyexampleprac/eventsadvanced.sol": "EventDrivenArchitecture"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -147,12 +133,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"aksimplecoin.sol": {
-			"keccak256": "0x4b6f191977f1040ae01afe18c2122c0ce4581e126d36ed8b9b1c9d04d6469d2d",
+		"soliditybyexampleprac/eventsadvanced.sol": {
+			"keccak256": "0xe00463c3d8d36c58a8f261fa2a99b04d77eb70399e288b75737984fc642eefe6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a490243eed6aaf33a07e17cfab3acbbf9322be6e59a8c9fef3272fc90b3e2ed0",
-				"dweb:/ipfs/QmXZSh5m6Wqb7LzaEcexdxyqiiKJWup6DDdRA7GU9KoHAc"
+				"bzz-raw://eb8b38033b0e94133bc2236cb88b19d90a568cc3555e3e2d0a1815408420fa11",
+				"dweb:/ipfs/QmYV5ZWXzivYXJy8L5q5DkxgyuxJaPvWLGqetHxJbiCvTq"
 			]
 		}
 	},
